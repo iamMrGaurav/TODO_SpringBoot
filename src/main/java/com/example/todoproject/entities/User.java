@@ -9,8 +9,6 @@ import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
-import java.time.LocalDate;
-import java.time.Period;
 
 @Entity
 @Getter
@@ -46,16 +44,5 @@ public class User {
     @NotNull(message = "Password cannot be Null")
     private String password;
 
-    @NotNull(message = "DOB Can't be null")
-    private LocalDate dob;
-    @Transient
-    private int age;
 
-    public int getAge() {
-        return Period.between(dob, LocalDate.now()).getYears();
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
 }

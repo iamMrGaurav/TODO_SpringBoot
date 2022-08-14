@@ -13,7 +13,7 @@ public interface TodoService {
 
     Todo getTodoById(int todoId);
 
-    Todo updateTodoById(int id);
+    Todo updateTodoById(int id, Todo todo);
 
-    Todo deleteTodo(int id);
+    void deleteTodo(int id);
 }

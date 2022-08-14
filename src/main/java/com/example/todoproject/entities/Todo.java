@@ -23,12 +23,15 @@ public class Todo {
 
     @NotNull(message = "Title cannot be null")
     @NotEmpty(message = "Title cannot be empty")
-
+    @Column(updatable = true)
     private String title;
+
+    @Column(updatable = true)
     private String description;
 
     @NotNull(message = "Date cannot be null")
     @NotEmpty(message = "Date cannot be empty")
+    @Column(updatable = true)
     private ZonedDateTime date;
 
     @ManyToOne
